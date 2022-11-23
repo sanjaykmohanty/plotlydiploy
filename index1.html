@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <a href="index.html">Summary</a>
+            <a class="active" href="index1.html">Top 10 Bacteria</a>
+            <a href="index2.html">Bacteria per Sample</a>
+            <a href="index3.html">Washing Frequency</a>
+        </div>
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Belly Button Biodiversity<br>Top 10 Bacteria Cultures Found</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div> 
+        </div>        
+        <div class = "boxed">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well">
+                        <h5>Test Subject ID No.:</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Demographic Info</h3>
+                    </div>
+                    <div id="sample-metadata" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div id="bar"></div>
+            </div>
+            <div id="info">
+                <div style = "color:white;">
+                    <h4><b>Description:</b></h4>
+                    <p>Eager navel-gazers participated in a study by twirling a sterile swab in their belly buttons to collect their microbes. Demographic information and the bacterial data for each volunteer is shown in this page. Specifically, volunteers can identify the top 10 bacterial species in their belly buttons. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/static/js/barChart.js"></script>
+
+</body>
+</html>
